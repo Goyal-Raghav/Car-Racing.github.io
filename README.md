@@ -1,1 +1,2 @@
-# Car-Racing.github.io
+# C36RV_SpeedRacer_StudentActivity
+Student Activity
