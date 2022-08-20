@@ -4,6 +4,8 @@ class Player {
     this.positionX = 0;
     this.positionY = 0;
     this.index = null;
+    this.rank = 0;
+    this.score = 0;
   }
   getCount() {
     var playerCountRef = database.ref("playerCount");
@@ -27,7 +29,9 @@ class Player {
     database.ref(databasePath).set({
       name: this.name,
       positionX: this.positionX,
-      positionY: this.positionY
+      positionY: this.positionY,
+      rank: this.rank,
+      score: this.score
     })
 
 
@@ -43,7 +47,9 @@ class Player {
     var playerIndex = "players/player"+this.index;
     database.ref(playerIndex).update({
       positionX:this.positionX,
-      positionY:this.positionY
+      positionY:this.positionY,
+      rank: this.rank,
+      score: this.score
     })
   }
 }
